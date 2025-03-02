@@ -1,13 +1,161 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+  font-family: Inter,sans-serif;
+  box-sizing: border-box;
+}
+body{
+  background-color: #FAFAF8;
+  margin:0;
+  padding:0;
+}
+.header{
+  box-shadow: 0px 0px 7px rgb(0,0,0.1);
+  background-color: white;
+  height:70px;
+  display:flex;
+  align-items: center;
+  justify-content:center;
+  gap:10px;
+}
+.logo{
+  height : 50px;
+}
+.logotxt{
+  font-family: "Playwrite IT Moderna", cursive;
+  font-weight: 400;
+}
+main{
+  margin-top: 30px;
+  padding:10px 30px;
+}
+.add-ingreds-form{
+  display:flex;
+  justify-content: center;
+  gap:12px;
+}
+.add-ingreds-form>input{
+  border-radius: 10px;
+  border:1px solid #D1D5DB;
+  padding:9px 13px;
+  box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.05);
+  flex-grow: 1;
+  min-width:150px;
+  max-width: 400px;
+}
+.add-ingreds-form>button{
+  font-family: Inter,sans-serif;
+  background-color: black;
+  color:#FAFAF8;
+  border-radius: 10px;
+  width:max-content;
+}
+.add-ingreds-form>button:hover{
+  color:black;
+  background-color: white;
+}
+.getrecipe{
+  height:80px;
+  max-width: 750px;
+  margin-top: 30px;
+  display: flex;
+  justify-content:center;
+  gap:30px;
+  align-items: center;
+  border-radius: 8px;
+  background: #e9e5d9;
+  padding: 10px 28px;
+}
+.getrecipetext{
+  display:flex;
+  align-items:flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.getrecipetext>h3{
+  margin:0;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 24px;
+}
+.getrecipetext>p{
+  color: #6B7280;
+  margin:0;
+  font-size: 0.875rem;
+  line-height: 20px;
+}
+.getrecipe>button{
+  border: none;
+    border-radius: 6px;
+    background: #D17557;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    color: #FAFAF8;
+    padding: 9px 17px;
+    font-family: Inter, sans-serif;
+    font-size: 0.875rem;
+    cursor: pointer;
+}
+.outerofgetrecipe{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.resic{
+  display: none;
+}
+@media (max-width: 412px) {
+  body,.getrecipetext,.suggested-recipe-container,.button{
+    font-size:x-small;
+  }
+  .restxt{
+    display: none;
+  }
+  .resic{
+    display:flex;
+  }
+}
+.ftr{
+  font-family: "Playwrite IT Moderna", cursive;
+  display:flex;
+  justify-content:flex-end;
+  align-items: flex-end;
+  right: 20px;
+  bottom:10px;
+  position: fixed;
+  color:#1212121d;
+}
+.suggested-recipe-container {
+  color: #475467;
+  line-height: 28px;
+  font-size: 1.125rem;
+  font-weight: 400;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.suggested-recipe-container ul li, .suggested-recipe-container ol li {
+  margin-bottom: 8px;
+}
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(211, 211, 211, 0.6); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; 
+  pointer-events: all; 
+}
+
+.loader {
+  width: 60px;
+  aspect-ratio: 4;
+  background: radial-gradient(circle closest-side, #000 90%, #0000) 0/calc(100%/3) 100% space;
+  clip-path: inset(0 100% 0 0);
+  animation: l1 1s steps(4) infinite;
+}
+
+@keyframes l1 {
+  to {
+    clip-path: inset(0 -34% 0 0);
+  }
 }
