@@ -101,7 +101,7 @@ main{
 .resic{
   display: none;
 }
-@media (max-width: 412px) {
+@media (max-width: 450px) {
   body,.getrecipetext,.suggested-recipe-container,.button{
     font-size:x-small;
   }
