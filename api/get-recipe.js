@@ -1,5 +1,3 @@
-//import fetch from 'node-fetch';
-//hi
 export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
@@ -17,7 +15,7 @@ Format your response in markdown.
 
   try {
     const hfResp = await fetch(
-      'https://api-inference.huggingface.co/models/mistralai/Mixtral-8x7B-Instruct-v0.1',
+      'https://api-inference.huggingface.co/models/flax-community/t5-recipe-generation',
       {
         method: 'POST',
         headers: {
