@@ -6,4 +6,4 @@ Uses Hugging Face API to suggest a recipe based on the ingredients given by the 
 - CSS
 - JAVASCRIPT
 - REACT.JS
-- If you have any questions, feel free to reach out to [abhinendra0211@gmail.com](mailto:abhinendra0211@gmail.com).
+- If you have any questions or suggestions, feel free to reach out to [abhinendra0211@gmail.com](mailto:abhinendra0211@gmail.com).
